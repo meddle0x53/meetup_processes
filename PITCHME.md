@@ -316,7 +316,6 @@ send(pid, {:say, "Arnold", "I'll be back!"})
 ```
 
 #HSLIDE
-* Receive е като case, който се изпълнява върху полученото съобщение.
 * Съобщението може да е всякакъв тип.
 * Можем да изпратим `PID`-а на процеса, който извиква `send` и да го използваме за да получим отговор.
 
@@ -378,10 +377,10 @@ end
 
 #HSLIDE
 ```elixir
-1..50 |> Enum.map(fn x -> :timer.sleep(1000); x* x end)
+1..50 |> Enum.map(fn x -> :timer.sleep(1000); x * x end)
 # След около 50 секунди ще имаме квадратите
 
-1..50 |> PEnum.map(fn x -> :timer.sleep(1000); x* x end)
+1..50 |> PEnum.map(fn x -> :timer.sleep(1000); x * x end)
 # След около секунда ще имаме квадратите
 ```
 
